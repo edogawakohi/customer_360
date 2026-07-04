@@ -15,7 +15,7 @@ Processing telecom logs (JSON/PARQUET) using Pyspark and Gemini. This project fo
 * **Generate Business Insights:** Transform raw log data into meaningful analytics that support customer segmentation and decision-making.
 
 ## 2.Detailed process
-**Pipeline 1: Log Content Processing(Viewing Data - April)** 
+**Pipeline 1: Log Content Processing (Viewing Data - April)** 
 
 This pipeline processes customer viewing logs to generate customer behavior metrics and preference profiles.
 * **Content Classification:** Map raw `AppName` values into standardized content categories including: Truyền hình, Phim ảnh, Giải trí, Thiếu nhi, Thể thao.
@@ -25,4 +25,11 @@ This pipeline processes customer viewing logs to generate customer behavior metr
     * **Low:** Fewer than **10** active days.
 * **Preference Profiling:** Identify each customer's most frequently watched content category (`MostWatch`) and generate an overall content preference profile (`Taste`) based on viewing behavior.
 
-****
+**Pipeline 2: Log Search Processing (Searching Data - June & July)** 
+This pipeline analyzes customer search behavior across two consecutive months to identify search preferences and behavioral changes. 
+* **Keyword Extraction:** Using **PySpark** to indetify the most frequently searched keyword for each customer on the monthly basis.
+* **AI-powered Content Classification:** Integate the `gemini-3.1-flash-lite-preview` model to classify unstructured search keywords into standardized content categories.
+* **Search Behavior Analysis:** Compare search categories between **June** and **July** to determin whether a customer's search preference has **Change** or remained **Unchanged**
+
+## 3.Project Structure
+* **
