@@ -32,4 +32,8 @@ This pipeline analyzes customer search behavior across two consecutive months to
 * **Search Behavior Analysis:** Compare search categories between **June** and **July** to determin whether a customer's search preference has **Change** or remained **Unchanged**
 
 ## 3.Project Structure
-* **
+* **[etl_script.py](etl_script.py)** Cleans raw data, classifies content categories, calculates customer activity levels, and generates customer preference metrics (`MostWatch`, `Taste`).
+* **[main.py](main.py)** Entry point for the Search Log ETL pipeline. Orchestrates the complete workflow, including keyword extraction, AI classification, and trend analysis.
+* **[job_mostsearch.py](job_mostsearch.py)** Identifies the most searched keyword for each customer using PySpark and monthly search logs.
+* **[job_trending.py](job_trending.py)** Compares customer search categories between June and July to determine whether search preferences have **Changed** or **Unchanged**.
+* **[mapping_ai.py](maopping_ai.py)** Uses the `gemini-3.1-flash-lite-preview` model to classify unstructured search keywords into standardized content categories.
