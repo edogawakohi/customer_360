@@ -37,4 +37,5 @@ This pipeline analyzes customer search behavior across two consecutive months to
 * **[job_mostsearch.py](job_mostsearch.py)** Identifies the most searched keyword for each customer using PySpark and monthly search logs.
 * **[job_trending.py](job_trending.py)** Compares customer search categories between June and July to determine whether search preferences have **Changed** or **Unchanged**.
 * **[mapping_ai.py](maopping_ai.py)** Uses the `gemini-3.1-flash-lite-preview` model to classify unstructured search keywords into standardized content categories.
-## 4.Data Visualization
+## 4.Data Visualization 
+📊 **[Link Báo cáo Power BI (Customer 360 Dashboard)] (https://app.powerbi.com/links/aHaWP9543p?ctid=14d5de2b-d212-4175-92d5-156ea5b7c037&pbi_source=linkShare)
